@@ -7,7 +7,14 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': path.join(__dirname,'src')
+      '@': path.join(__dirname, 'src')
+    }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import '@/styles/variables.scss';`
+      }
     }
   }
 })

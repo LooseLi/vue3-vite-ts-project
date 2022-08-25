@@ -15,7 +15,10 @@ console.log(store.state.count)
 console.log(user)
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+h1 {
+  color: $color;
+}
 .box {
   width: 20px;
   height: 20px;
