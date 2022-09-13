@@ -3,4 +3,6 @@
  */
 import request from "@/utils/request"
 
-export default 111
+export const getLoginInfo = () => {
+  return request.get('',{})
+}

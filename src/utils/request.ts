@@ -1,7 +1,7 @@
-import axios from 'axios'
+import axios, { AxiosRequestConfig } from 'axios'
 
 const request = axios.create({
-  baseURL: ''
+  baseURL: import.meta.env.VITE_API_BASEURL
 })
 
 // 请求拦截器
@@ -20,4 +20,6 @@ request.interceptors.response.use(function (response) {
   return Promise.reject(error)
 })
 
-export default request
+export default (config: AxiosRequestConfig) => {
+  return request(config)
+}
