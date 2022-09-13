@@ -3,6 +3,8 @@
   <p>{{ $store.state.count }}</p>
   <img src="@/assets/vue.svg" alt="">
   <div class="box"></div>
+  <el-button>测试按钮</el-button>
+  <el-date-picker v-model="value1" type="date" placeholder="Pick a day" :size="size" />
 </template>
 
 <script lang="ts" setup>
@@ -13,6 +15,8 @@ const store = useStore()
 console.log(store.state.count)
 
 console.log(user)
+
+const value1 = ''
 </script>
 
 <style lang="scss" scoped>

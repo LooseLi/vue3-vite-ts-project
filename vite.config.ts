@@ -16,5 +16,20 @@ export default defineConfig({
         additionalData: `@import '@/styles/variables.scss';`
       }
     }
+  },
+  server: {
+    proxy: {
+      // 字符串简写写法
+      // /foo/111 => http://localhost:4567/foo/111
+      '/foo': 'http://localhost:4567',
+      // 选项写法
+      '/api': {
+        // 代理的目标地址
+        target: 'http://jsonplaceholder.typicode.com',
+        // 兼容基于名字的虚拟主机
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      },
+    }
   }
 })
