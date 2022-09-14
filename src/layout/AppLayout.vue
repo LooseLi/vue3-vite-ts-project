@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-aside width="200px">
+    <el-aside>
       <AppMenu />
     </el-aside>
     <el-container>
@@ -26,6 +26,7 @@ import AppMenu from './components/AppMenu.vue'
   color: #333;
 }
 .el-aside {
+  width: auto;
   background-color: #304156;
   color: #333;
 }
