@@ -1,21 +1,15 @@
 import { createStore } from 'vuex'
 
-export interface State {
-  count: number,
-  isCollapse: boolean
+const state = {
+  count: 100,
+  isCollapse: false
 }
 
-const store = createStore({
-  state() {
-    return {
-      count: 100,
-      isCollapse: false
-    }
-  },
+export type State = typeof state
+
+export const store = createStore<State>({
+  state,
   mutations: {
-    increment(state) {
-      state.count++
-    },
     setIsCollapse(state, payload) {
       state.isCollapse = payload
     }

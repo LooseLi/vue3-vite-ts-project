@@ -4,7 +4,9 @@
       <AppMenu />
     </el-aside>
     <el-container>
-      <el-header>Header</el-header>
+      <el-header>
+        <ToggleSidebar />
+      </el-header>
       <el-main>
         <router-view />
       </el-main>
@@ -14,6 +16,7 @@
 
 <script setup lang="ts">
 import AppMenu from './components/AppMenu.vue'
+import ToggleSidebar from './components/AppHeader/ToggleSidebar.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -33,5 +36,10 @@ import AppMenu from './components/AppMenu.vue'
 .el-main {
   background-color: #e9eef3;
   color: #333;
+}
+.el-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 </style>

@@ -1,5 +1,12 @@
 <template>
-  <i class="el-icon-s-fold" @click="$store.commit('setIsCollapse', true)" />
+  <el-icon @click="$store.commit('setIsCollapse', !$store.state.isCollapse)">
+    <div v-show="$store.state.isCollapse">
+      <Expand />
+    </div>
+    <div v-show="!$store.state.isCollapse">
+      <Fold />
+    </div>
+  </el-icon>
 </template>
 
 <script lang="ts" setup></script>
