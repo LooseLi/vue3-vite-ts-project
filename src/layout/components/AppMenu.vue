@@ -4,17 +4,71 @@
       <el-icon><icon-menu /></el-icon>
       <span>首页</span>
     </el-menu-item>
-    <el-menu-item index="2">
+    <el-sub-menu index="/product">
+      <template #title>
+        <el-icon><location /></el-icon>
+        <span>商品</span>
+      </template>
+      <el-menu-item-group>
+        <el-menu-item index="/product/product_list">
+          <el-icon><icon-menu /></el-icon>
+          <span>商品列表</span>
+        </el-menu-item>
+        <el-menu-item index="/product/product_classify">
+          <el-icon><icon-menu /></el-icon>
+          <span>商品分类</span>
+        </el-menu-item>
+        <el-menu-item index="/product/product_attr">
+          <el-icon><icon-menu /></el-icon>
+          <span>商品规格</span>
+        </el-menu-item>
+        <el-menu-item index="/product/product_reply">
+          <el-icon><icon-menu /></el-icon>
+          <span>商品评论</span>
+        </el-menu-item>
+      </el-menu-item-group>
+    </el-sub-menu>
+    <el-sub-menu index="/order">
+      <template #title>
+        <el-icon><location /></el-icon>
+        <span>订单</span>
+      </template>
+      <el-menu-item-group>
+        <el-menu-item index="/order/order_list">
+          <el-icon><location /></el-icon>
+          <span>订单列表</span>
+        </el-menu-item>
+      </el-menu-item-group>
+    </el-sub-menu>
+    <el-menu-item index="/media">
       <el-icon><icon-menu /></el-icon>
-      <span>Navigator Two</span>
+      <span>媒体</span>
     </el-menu-item>
-    <el-menu-item index="3" disabled>
-      <el-icon><document /></el-icon>
-      <span>Navigator Three</span>
-    </el-menu-item>
-    <el-menu-item index="4">
-      <el-icon><setting /></el-icon>
-      <span>Navigator Four</span>
-    </el-menu-item>
+    <el-sub-menu index="/permission">
+      <template #title>
+        <el-icon><location /></el-icon>
+        <span>权限</span>
+      </template>
+      <el-menu-item-group>
+        <el-menu-item index="/permission/permission_role">
+          <el-icon><location /></el-icon>
+          <span>角色</span>
+        </el-menu-item>
+        <el-menu-item index="/permission/permission_admin">
+          <el-icon><location /></el-icon>
+          <span>管理员</span>
+        </el-menu-item>
+        <el-menu-item index="/permission/permission_rule">
+          <el-icon><location /></el-icon>
+          <span>权限规则</span>
+        </el-menu-item>
+      </el-menu-item-group>
+    </el-sub-menu>
   </el-menu>
 </template>
+
+<style lang="scss" scoped>
+.el-menu {
+  border-right: none;
+}
+</style>
