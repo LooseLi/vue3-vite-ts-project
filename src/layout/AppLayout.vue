@@ -5,7 +5,10 @@
     </el-aside>
     <el-container>
       <el-header>
-        <ToggleSidebar />
+        <section class="left">
+          <ToggleSidebar class="sidebar" />
+          <Breadcrumb />
+        </section>
       </el-header>
       <el-main>
         <router-view />
@@ -16,6 +19,7 @@
 
 <script setup lang="ts">
 import AppMenu from './components/AppMenu.vue'
+import Breadcrumb from './components/AppHeader/Breadcrumb.vue'
 import ToggleSidebar from './components/AppHeader/ToggleSidebar.vue'
 </script>
 
@@ -25,7 +29,7 @@ import ToggleSidebar from './components/AppHeader/ToggleSidebar.vue'
 }
 .el-header,
 .el-footer {
-  background-color: #b3c0d1;
+  background-color: #fff;
   color: #333;
 }
 .el-aside {
@@ -41,5 +45,12 @@ import ToggleSidebar from './components/AppHeader/ToggleSidebar.vue'
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.left {
+  display: flex;
+  align-items: center;
+  .sidebar {
+    margin-right: 12px;
+  }
 }
 </style>
