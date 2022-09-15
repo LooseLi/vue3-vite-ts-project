@@ -13,12 +13,14 @@
     "@element-plus/icons-vue": "^2.0.9",
     "axios": "^0.27.2",
     "element-plus": "^2.2.16",
+    "nprogress": "^0.2.0",
     "vue": "^3.2.37",
     "vue-router": "^4.1.4",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@types/node": "^18.7.13",
+    "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^5.34.0",
     "@vitejs/plugin-vue": "^3.0.3",
     "eslint": "^8.22.0",

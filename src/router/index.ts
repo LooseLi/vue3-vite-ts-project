@@ -4,6 +4,8 @@ import orderRoutes from './modules/order'
 import mediaRoutes from './modules/media'
 import productRoutes from './modules/product'
 import permissionRoutes from './modules/permission'
+import nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -32,5 +34,13 @@ const router = createRouter({
   history: createWebHashHistory(), // 路由模式
   routes // 路由规则
 })
+
+router.beforeEach(() => {
+  nprogress.start();
+});
+
+router.afterEach(() => {
+  nprogress.done();
+});
 
 export default router
